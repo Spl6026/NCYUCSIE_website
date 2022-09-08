@@ -1,0 +1,130 @@
+@charset "utf-8";
+
+/*視窗設定*/
+body {
+    top: 70px;
+    position: relative;
+    font-family: 標楷體, serif;
+    background-color: #D5D5D5;
+}
+
+/*連結設定*/
+a {
+    text-decoration: none;
+    color: #ddad8c;
+}
+
+a:hover {
+    color: #D1BC7B;
+}
+
+:root {
+    scroll-padding-top: 100px;
+}
+
+#mail {
+    text-decoration: none;
+    color: #4F5D2F;
+}
+
+#mail:hover {
+    color: #BCBECC;
+}
+
+/*頁首,導覽,頁尾的共通設定*/
+
+
+/*導覽設定*/
+
+nav {
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    font-family: 微軟正黑體, serif;
+    font-weight: bold;
+    font-size: 100%;
+    text-align: center;
+    background-color: #1c5074;
+}
+
+/*頁面標題設定*/
+
+
+/*次標題設定*/
+
+
+/*小標題設定*/
+h3 {
+    margin-left: 30%;
+    margin-right: 30%;
+    font-size: 30px;
+    border-bottom: 3px #ddad8c solid;
+    text-align: center;
+    color: #352208;
+}
+
+/*內容區塊邊框設定*/
+#menu ul li {
+    display: inline;
+    padding-inline: 5%;
+    margin-inline: 1%;
+    border-inline: 1px #ddad8c solid;
+}
+
+#information {
+    color: #4F5D2F;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 500px;
+    font-size: 25px;
+    line-height: 200%;
+}
+
+#introduction {
+    color: #4F5D2F;
+    padding-left: 15%;
+    padding-right: 15%;
+    font-size: 25px;
+    line-height: 150%;
+    height: 100%;
+}
+
+#interest {
+    color: #4F5D2F;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 100%;
+    font-size: 25px;
+    line-height: 200%;
+}
+
+#sentence {
+    text-align: center;
+    color: #4F5D2F;
+    padding-left: 15%;
+    padding-right: 15%;
+    height: 100%;
+    font-size: 20px;
+}
+
+/*「更多介紹」連結設定*/
+
+
+/*連結圖示設定*/
+
+
+/*區塊間分隔*/
+
+
+/*文繞圖設定*/
+img[alt="self"] {
+    width: auto;
+    height: 400px;
+    float: right;
+}
+
+/*圓形圖片設定*/
+
+

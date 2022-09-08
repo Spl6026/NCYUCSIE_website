@@ -1,0 +1,1254 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8"/>
+    <title>jQuery DataTables</title>
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf8"
+            src="https://cdn.datatables.net/1.12.0/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript"
+            src="https://cdn.datatables.net/1.12.0/js/dataTables.bootstrap5.min.js"></script>
+    <link rel="stylesheet" type="text/css"
+          href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.12.0/css/dataTables.bootstrap5.min.css">
+</head>
+<body>
+
+<table id="example" class="table table-striped" style="width:100%">
+    <thead>
+    <tr>
+        <th>country_ch</th>
+        <th>country_en</th>
+        <th>cases</th>
+        <th>deaths</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td> 美國</td>
+        <td> United States</td>
+        <td> 82,077,268</td>
+        <td> 1,019,640</td>
+    </tr>
+    <tr>
+        <td> 印度</td>
+        <td> India</td>
+        <td> 43,123,801</td>
+        <td> 524,241</td>
+    </tr>
+    <tr>
+        <td> 巴西</td>
+        <td> Brazil</td>
+        <td> 30,701,900</td>
+        <td> 664,987</td>
+    </tr>
+    <tr>
+        <td> 法國</td>
+        <td> France</td>
+        <td> 29,189,582</td>
+        <td> 147,478</td>
+    </tr>
+    <tr>
+        <td> 德國</td>
+        <td> Germany</td>
+        <td> 25,732,153</td>
+        <td> 137,499</td>
+    </tr>
+    <tr>
+        <td> 英國</td>
+        <td> United Kingdom</td>
+        <td> 22,159,805</td>
+        <td> 176,708</td>
+    </tr>
+    <tr>
+        <td> 俄羅斯</td>
+        <td> Russia</td>
+        <td> 18,264,836</td>
+        <td> 377,759</td>
+    </tr>
+    <tr>
+        <td> 韓國</td>
+        <td> South Korea</td>
+        <td> 17,795,357</td>
+        <td> 23,744</td>
+    </tr>
+    <tr>
+        <td> 義大利</td>
+        <td> Italy</td>
+        <td> 17,071,649</td>
+        <td> 165,346</td>
+    </tr>
+    <tr>
+        <td> 土耳其</td>
+        <td> Turkey</td>
+        <td> 15,055,576</td>
+        <td> 98,904</td>
+    </tr>
+    <tr>
+        <td> 西班牙</td>
+        <td> Spain</td>
+        <td> 12,127,122</td>
+        <td> 105,444</td>
+    </tr>
+    <tr>
+        <td> 越南</td>
+        <td> Vietnam</td>
+        <td> 10,698,180</td>
+        <td> 43,067</td>
+    </tr>
+    <tr>
+        <td> 阿根廷</td>
+        <td> Argentina</td>
+        <td> 9,135,308</td>
+        <td> 128,776</td>
+    </tr>
+    <tr>
+        <td> 日本</td>
+        <td> Japan</td>
+        <td> 8,404,972</td>
+        <td> 30,091</td>
+    </tr>
+    <tr>
+        <td> 荷蘭</td>
+        <td> Netherlands</td>
+        <td> 8,070,272</td>
+        <td> 22,294</td>
+    </tr>
+    <tr>
+        <td> 伊朗</td>
+        <td> Iran</td>
+        <td> 7,228,434</td>
+        <td> 141,232</td>
+    </tr>
+    <tr>
+        <td> 澳洲</td>
+        <td> Australia</td>
+        <td> 6,635,840</td>
+        <td> 7,807</td>
+    </tr>
+    <tr>
+        <td> 哥倫比亞</td>
+        <td> Colombia</td>
+        <td> 6,095,316</td>
+        <td> 139,821</td>
+    </tr>
+    <tr>
+        <td> 印尼</td>
+        <td> Indonesia</td>
+        <td> 6,050,958</td>
+        <td> 156,464</td>
+    </tr>
+    <tr>
+        <td> 波蘭</td>
+        <td> Poland</td>
+        <td> 6,003,531</td>
+        <td> 116,207</td>
+    </tr>
+    <tr>
+        <td> 墨西哥</td>
+        <td> Mexico</td>
+        <td> 5,745,652</td>
+        <td> 324,465</td>
+    </tr>
+    <tr>
+        <td> 烏克蘭</td>
+        <td> Ukraine</td>
+        <td> 5,006,460</td>
+        <td> 108,449</td>
+    </tr>
+    <tr>
+        <td> 馬來西亞</td>
+        <td> Malaysia</td>
+        <td> 4,479,809</td>
+        <td> 35,620</td>
+    </tr>
+    <tr>
+        <td> 泰國</td>
+        <td> Thailand</td>
+        <td> 4,379,084</td>
+        <td> 29,512</td>
+    </tr>
+    <tr>
+        <td> 奧地利</td>
+        <td> Austria</td>
+        <td> 4,215,150</td>
+        <td> 18,303</td>
+    </tr>
+    <tr>
+        <td> 比利時</td>
+        <td> Belgium</td>
+        <td> 4,116,397</td>
+        <td> 31,613</td>
+    </tr>
+    <tr>
+        <td> 以色列</td>
+        <td> Israel</td>
+        <td> 4,110,600</td>
+        <td> 10,805</td>
+    </tr>
+    <tr>
+        <td> 葡萄牙</td>
+        <td> Portugal</td>
+        <td> 4,066,674</td>
+        <td> 22,583</td>
+    </tr>
+    <tr>
+        <td> 捷克</td>
+        <td> Czech Republic</td>
+        <td> 3,915,917</td>
+        <td> 40,246</td>
+    </tr>
+    <tr>
+        <td> 南非</td>
+        <td> South Africa</td>
+        <td> 3,894,745</td>
+        <td> 100,771</td>
+    </tr>
+    <tr>
+        <td> 加拿大</td>
+        <td> Canada</td>
+        <td> 3,825,901</td>
+        <td> 40,265</td>
+    </tr>
+    <tr>
+        <td> 菲律賓</td>
+        <td> Philippines</td>
+        <td> 3,688,292</td>
+        <td> 60,458</td>
+    </tr>
+    <tr>
+        <td> 瑞士</td>
+        <td> Switzerland</td>
+        <td> 3,649,152</td>
+        <td> 13,300</td>
+    </tr>
+    <tr>
+        <td> 智利</td>
+        <td> Chile</td>
+        <td> 3,609,338</td>
+        <td> 57,725</td>
+    </tr>
+    <tr>
+        <td> 秘魯</td>
+        <td> Peru</td>
+        <td> 3,572,423</td>
+        <td> 213,040</td>
+    </tr>
+    <tr>
+        <td> 希臘</td>
+        <td> Greece</td>
+        <td> 3,395,641</td>
+        <td> 29,576</td>
+    </tr>
+    <tr>
+        <td> 丹麥</td>
+        <td> Denmark</td>
+        <td> 3,023,838</td>
+        <td> 6,342</td>
+    </tr>
+    <tr>
+        <td> 羅馬尼亞</td>
+        <td> Romania</td>
+        <td> 2,903,394</td>
+        <td> 65,612</td>
+    </tr>
+    <tr>
+        <td> 瑞典</td>
+        <td> Sweden</td>
+        <td> 2,504,894</td>
+        <td> 18,897</td>
+    </tr>
+    <tr>
+        <td> 伊拉克</td>
+        <td> Iraq</td>
+        <td> 2,326,577</td>
+        <td> 25,216</td>
+    </tr>
+    <tr>
+        <td> 塞爾維亞</td>
+        <td> Serbia</td>
+        <td> 2,013,240</td>
+        <td> 16,050</td>
+    </tr>
+    <tr>
+        <td> 孟加拉</td>
+        <td> Bangladesh</td>
+        <td> 1,953,049</td>
+        <td> 29,127</td>
+    </tr>
+    <tr>
+        <td> 匈牙利</td>
+        <td> Hungary</td>
+        <td> 1,909,948</td>
+        <td> 46,343</td>
+    </tr>
+    <tr>
+        <td> 斯洛伐克</td>
+        <td> Slovakia</td>
+        <td> 1,787,142</td>
+        <td> 20,050</td>
+    </tr>
+    <tr>
+        <td> 約旦</td>
+        <td> Jordan</td>
+        <td> 1,694,216</td>
+        <td> 14,048</td>
+    </tr>
+    <tr>
+        <td> 喬治亞</td>
+        <td> Georgia</td>
+        <td> 1,655,221</td>
+        <td> 16,811</td>
+    </tr>
+    <tr>
+        <td> 愛爾蘭</td>
+        <td> Ireland</td>
+        <td> 1,535,451</td>
+        <td> 7,203</td>
+    </tr>
+    <tr>
+        <td> 巴基斯坦</td>
+        <td> Pakistan</td>
+        <td> 1,529,351</td>
+        <td> 30,376</td>
+    </tr>
+    <tr>
+        <td> 挪威</td>
+        <td> Norway</td>
+        <td> 1,430,124</td>
+        <td> 3,061</td>
+    </tr>
+    <tr>
+        <td> 哈薩克</td>
+        <td> Kazakhstan</td>
+        <td> 1,305,649</td>
+        <td> 13,661</td>
+    </tr>
+    <tr>
+        <td> 新加坡</td>
+        <td> Singapore</td>
+        <td> 1,245,007</td>
+        <td> 1,366</td>
+    </tr>
+    <tr>
+        <td> 香港</td>
+        <td> Hong Kong</td>
+        <td> 1,208,740</td>
+        <td> 9,361</td>
+    </tr>
+    <tr>
+        <td> 摩洛哥</td>
+        <td> Morocco</td>
+        <td> 1,165,849</td>
+        <td> 16,072</td>
+    </tr>
+    <tr>
+        <td> 保加利亞</td>
+        <td> Bulgaria</td>
+        <td> 1,161,992</td>
+        <td> 37,059</td>
+    </tr>
+    <tr>
+        <td> 克羅埃西亞</td>
+        <td> Croatia</td>
+        <td> 1,131,492</td>
+        <td> 15,942</td>
+    </tr>
+    <tr>
+        <td> 古巴</td>
+        <td> Cuba</td>
+        <td> 1,104,661</td>
+        <td> 8,529</td>
+    </tr>
+    <tr>
+        <td> 黎巴嫩</td>
+        <td> Lebanon</td>
+        <td> 1,098,074</td>
+        <td> 10,409</td>
+    </tr>
+    <tr>
+        <td> 芬蘭</td>
+        <td> Finland</td>
+        <td> 1,069,740</td>
+        <td> 4,284</td>
+    </tr>
+    <tr>
+        <td> 立陶宛</td>
+        <td> Lithuania</td>
+        <td> 1,060,636</td>
+        <td> 9,129</td>
+    </tr>
+    <tr>
+        <td> 紐西蘭</td>
+        <td> New Zealand</td>
+        <td> 1,046,670</td>
+        <td> 929</td>
+    </tr>
+    <tr>
+        <td> 突尼西亞</td>
+        <td> Tunisia</td>
+        <td> 1,041,197</td>
+        <td> 28,575</td>
+    </tr>
+    <tr>
+        <td> 斯洛維尼亞</td>
+        <td> Slovenia</td>
+        <td> 1,019,834</td>
+        <td> 6,625</td>
+    </tr>
+    <tr>
+        <td> 白俄羅斯</td>
+        <td> Belarus</td>
+        <td> 982,867</td>
+        <td> 6,978</td>
+    </tr>
+    <tr>
+        <td> 尼泊爾</td>
+        <td> Nepal</td>
+        <td> 979,004</td>
+        <td> 11,952</td>
+    </tr>
+    <tr>
+        <td> 玻利維亞</td>
+        <td> Bolivia</td>
+        <td> 906,221</td>
+        <td> 21,943</td>
+    </tr>
+    <tr>
+        <td> 阿拉伯聯合大公國</td>
+        <td> UAE</td>
+        <td> 902,803</td>
+        <td> 2,302</td>
+    </tr>
+    <tr>
+        <td> 烏拉圭</td>
+        <td> Uruguay</td>
+        <td> 902,540</td>
+        <td> 7,213</td>
+    </tr>
+    <tr>
+        <td> 厄瓜多</td>
+        <td> Ecuador</td>
+        <td> 872,542</td>
+        <td> 35,610</td>
+    </tr>
+    <tr>
+        <td> 哥斯大黎加</td>
+        <td> Costa Rica</td>
+        <td> 866,164</td>
+        <td> 8,444</td>
+    </tr>
+    <tr>
+        <td> 瓜地馬拉</td>
+        <td> Guatemala</td>
+        <td> 852,591</td>
+        <td> 17,829</td>
+    </tr>
+    <tr>
+        <td> 臺灣</td>
+        <td> Taiwan</td>
+        <td> 830,257</td>
+        <td> 1,097</td>
+    </tr>
+    <tr>
+        <td> 拉脫維亞</td>
+        <td> Latvia</td>
+        <td> 826,038</td>
+        <td> 5,803</td>
+    </tr>
+    <tr>
+        <td> 巴拿馬</td>
+        <td> Panama</td>
+        <td> 810,242</td>
+        <td> 8,206</td>
+    </tr>
+    <tr>
+        <td> 亞塞拜然</td>
+        <td> Azerbaijan</td>
+        <td> 792,638</td>
+        <td> 9,709</td>
+    </tr>
+    <tr>
+        <td> 沙烏地阿拉伯</td>
+        <td> Saudi Arabia</td>
+        <td> 759,856</td>
+        <td> 9,118</td>
+    </tr>
+    <tr>
+        <td> 斯里蘭卡</td>
+        <td> Sri Lanka</td>
+        <td> 663,678</td>
+        <td> 16,511</td>
+    </tr>
+    <tr>
+        <td> 巴勒斯坦</td>
+        <td> Palestine</td>
+        <td> 657,456</td>
+        <td> 5,659</td>
+    </tr>
+    <tr>
+        <td> 巴拉圭</td>
+        <td> Paraguay</td>
+        <td> 649,929</td>
+        <td> 18,881</td>
+    </tr>
+    <tr>
+        <td> 科威特</td>
+        <td> Kuwait</td>
+        <td> 632,074</td>
+        <td> 2,555</td>
+    </tr>
+    <tr>
+        <td> 緬甸</td>
+        <td> Myanmar</td>
+        <td> 613,144</td>
+        <td> 19,434</td>
+    </tr>
+    <tr>
+        <td> 多明尼加</td>
+        <td> Dominican</td>
+        <td> 580,661</td>
+        <td> 4,377</td>
+    </tr>
+    <tr>
+        <td> 巴林</td>
+        <td> Bahrain</td>
+        <td> 578,255</td>
+        <td> 1,479</td>
+    </tr>
+    <tr>
+        <td> 愛沙尼亞</td>
+        <td> Estonia</td>
+        <td> 573,922</td>
+        <td> 2,556</td>
+    </tr>
+    <tr>
+        <td> 委內瑞拉</td>
+        <td> Venezuela</td>
+        <td> 523,020</td>
+        <td> 5,712</td>
+    </tr>
+    <tr>
+        <td> 摩爾多瓦</td>
+        <td> Moldova</td>
+        <td> 516,986</td>
+        <td> 11,489</td>
+    </tr>
+    <tr>
+        <td> 埃及</td>
+        <td> Egypt</td>
+        <td> 515,645</td>
+        <td> 24,613</td>
+    </tr>
+    <tr>
+        <td> 利比亞</td>
+        <td> Libya</td>
+        <td> 501,904</td>
+        <td> 6,430</td>
+    </tr>
+    <tr>
+        <td> 賽普勒斯</td>
+        <td> Cyprus</td>
+        <td> 477,711</td>
+        <td> 1,032</td>
+    </tr>
+    <tr>
+        <td> 衣索比亞</td>
+        <td> Ethiopia</td>
+        <td> 470,991</td>
+        <td> 7,512</td>
+    </tr>
+    <tr>
+        <td> 蒙古</td>
+        <td> Mongolia</td>
+        <td> 470,859</td>
+        <td> 2,110</td>
+    </tr>
+    <tr>
+        <td> 宏都拉斯</td>
+        <td> Honduras</td>
+        <td> 424,447</td>
+        <td> 10,896</td>
+    </tr>
+    <tr>
+        <td> 亞美尼亞</td>
+        <td> Armenia</td>
+        <td> 422,917</td>
+        <td> 8,623</td>
+    </tr>
+    <tr>
+        <td> 阿曼</td>
+        <td> Oman</td>
+        <td> 389,427</td>
+        <td> 4,260</td>
+    </tr>
+    <tr>
+        <td> 波士尼亞與赫塞哥維納</td>
+        <td> Bosnia and Herzegovina</td>
+        <td> 377,579</td>
+        <td> 15,781</td>
+    </tr>
+    <tr>
+        <td> 卡達</td>
+        <td> Qatar</td>
+        <td> 366,343</td>
+        <td> 677</td>
+    </tr>
+    <tr>
+        <td> 肯亞</td>
+        <td> Kenya</td>
+        <td> 324,046</td>
+        <td> 5,649</td>
+    </tr>
+    <tr>
+        <td> 尚比亞</td>
+        <td> Zambia</td>
+        <td> 320,680</td>
+        <td> 3,983</td>
+    </tr>
+    <tr>
+        <td> 北馬其頓</td>
+        <td> North Macedonia</td>
+        <td> 310,859</td>
+        <td> 9,291</td>
+    </tr>
+    <tr>
+        <td> 波札那</td>
+        <td> Botswana</td>
+        <td> 306,324</td>
+        <td> 2,690</td>
+    </tr>
+    <tr>
+        <td> 阿爾巴尼亞</td>
+        <td> Albania</td>
+        <td> 275,615</td>
+        <td> 3,497</td>
+    </tr>
+    <tr>
+        <td> 阿爾及利亞</td>
+        <td> Algeria</td>
+        <td> 265,823</td>
+        <td> 6,875</td>
+    </tr>
+    <tr>
+        <td> 奈及利亞</td>
+        <td> Nigeria</td>
+        <td> 255,859</td>
+        <td> 3,143</td>
+    </tr>
+    <tr>
+        <td> 辛巴威</td>
+        <td> Zimbabwe</td>
+        <td> 249,262</td>
+        <td> 5,483</td>
+    </tr>
+    <tr>
+        <td> 盧森堡</td>
+        <td> Luxembourg</td>
+        <td> 244,182</td>
+        <td> 1,073</td>
+    </tr>
+    <tr>
+        <td> 烏茲別克</td>
+        <td> Uzbekistan</td>
+        <td> 238,818</td>
+        <td> 1,637</td>
+    </tr>
+    <tr>
+        <td> 蒙特內哥羅</td>
+        <td> Montenegro</td>
+        <td> 236,320</td>
+        <td> 2,719</td>
+    </tr>
+    <tr>
+        <td> 科索沃</td>
+        <td> Kosovo</td>
+        <td> 228,241</td>
+        <td> 3,139</td>
+    </tr>
+    <tr>
+        <td> 莫三比克</td>
+        <td> Mozambique</td>
+        <td> 225,503</td>
+        <td> 2,201</td>
+    </tr>
+    <tr>
+        <td> 模里西斯</td>
+        <td> Mauritius</td>
+        <td> 223,793</td>
+        <td> 996</td>
+    </tr>
+    <tr>
+        <td> 中國大陸</td>
+        <td> China</td>
+        <td> 222,134</td>
+        <td> 5,214</td>
+    </tr>
+    <tr>
+        <td> 寮國</td>
+        <td> Laos</td>
+        <td> 209,434</td>
+        <td> 754</td>
+    </tr>
+    <tr>
+        <td> 吉爾吉斯</td>
+        <td> Kyrgyzstan</td>
+        <td> 200,993</td>
+        <td> 2,991</td>
+    </tr>
+    <tr>
+        <td> 冰島</td>
+        <td> Iceland</td>
+        <td> 186,545</td>
+        <td> 120</td>
+    </tr>
+    <tr>
+        <td> 馬爾地夫</td>
+        <td> Maldives</td>
+        <td> 179,483</td>
+        <td> 298</td>
+    </tr>
+    <tr>
+        <td> 阿富汗</td>
+        <td> Afghanistan</td>
+        <td> 179,321</td>
+        <td> 7,691</td>
+    </tr>
+    <tr>
+        <td> 烏干達</td>
+        <td> Uganda</td>
+        <td> 164,069</td>
+        <td> 3,596</td>
+    </tr>
+    <tr>
+        <td> 薩爾瓦多</td>
+        <td> El Salvador</td>
+        <td> 162,089</td>
+        <td> 4,129</td>
+    </tr>
+    <tr>
+        <td> 迦納</td>
+        <td> Ghana</td>
+        <td> 161,280</td>
+        <td> 1,445</td>
+    </tr>
+    <tr>
+        <td> 納米比亞</td>
+        <td> Namibia</td>
+        <td> 160,074</td>
+        <td> 4,028</td>
+    </tr>
+    <tr>
+        <td> 千里達及托巴哥</td>
+        <td> Trinidad and Tobago</td>
+        <td> 155,147</td>
+        <td> 3,874</td>
+    </tr>
+    <tr>
+        <td> 汶萊</td>
+        <td> Brunei</td>
+        <td> 144,956</td>
+        <td> 221</td>
+    </tr>
+    <tr>
+        <td> 柬埔寨</td>
+        <td> Cambodia</td>
+        <td> 136,262</td>
+        <td> 3,056</td>
+    </tr>
+    <tr>
+        <td> 牙買加</td>
+        <td> Jamaica</td>
+        <td> 132,909</td>
+        <td> 3,011</td>
+    </tr>
+    <tr>
+        <td> 盧安達</td>
+        <td> Rwanda</td>
+        <td> 129,918</td>
+        <td> 1,459</td>
+    </tr>
+    <tr>
+        <td> 喀麥隆</td>
+        <td> Cameroon</td>
+        <td> 119,780</td>
+        <td> 1,927</td>
+    </tr>
+    <tr>
+        <td> 安哥拉</td>
+        <td> Angola</td>
+        <td> 99,194</td>
+        <td> 1,900</td>
+    </tr>
+    <tr>
+        <td> 馬爾他</td>
+        <td> Malta</td>
+        <td> 93,572</td>
+        <td> 713</td>
+    </tr>
+    <tr>
+        <td> 剛果民主共和國</td>
+        <td> DR Congo</td>
+        <td> 87,023</td>
+        <td> 1,337</td>
+    </tr>
+    <tr>
+        <td> 塞內加爾</td>
+        <td> Senegal</td>
+        <td> 86,045</td>
+        <td> 1,966</td>
+    </tr>
+    <tr>
+        <td> 馬拉威</td>
+        <td> Malawi</td>
+        <td> 85,889</td>
+        <td> 2,637</td>
+    </tr>
+    <tr>
+        <td> 象牙海岸</td>
+        <td> Ivory Coast</td>
+        <td> 82,008</td>
+        <td> 799</td>
+    </tr>
+    <tr>
+        <td> 蘇利南</td>
+        <td> Suriname</td>
+        <td> 80,008</td>
+        <td> 1,337</td>
+    </tr>
+    <tr>
+        <td> 巴貝多</td>
+        <td> Barbados</td>
+        <td> 76,895</td>
+        <td> 434</td>
+    </tr>
+    <tr>
+        <td> 史瓦帝尼</td>
+        <td> Eswatini</td>
+        <td> 71,775</td>
+        <td> 1,403</td>
+    </tr>
+    <tr>
+        <td> 斐濟</td>
+        <td> Fiji</td>
+        <td> 64,812</td>
+        <td> 862</td>
+    </tr>
+    <tr>
+        <td> 馬達加斯加</td>
+        <td> Madagascar</td>
+        <td> 64,276</td>
+        <td> 1,393</td>
+    </tr>
+    <tr>
+        <td> 蓋亞那</td>
+        <td> Guyana</td>
+        <td> 63,861</td>
+        <td> 1,228</td>
+    </tr>
+    <tr>
+        <td> 蘇丹</td>
+        <td> Sudan</td>
+        <td> 62,195</td>
+        <td> 4,936</td>
+    </tr>
+    <tr>
+        <td> 不丹</td>
+        <td> Bhutan</td>
+        <td> 59,574</td>
+        <td> 21</td>
+    </tr>
+    <tr>
+        <td> 茅利塔尼亞</td>
+        <td> Mauritania</td>
+        <td> 58,871</td>
+        <td> 982</td>
+    </tr>
+    <tr>
+        <td> 貝里斯</td>
+        <td> Belize</td>
+        <td> 58,028</td>
+        <td> 676</td>
+    </tr>
+    <tr>
+        <td> 維德角</td>
+        <td> Cape Verde</td>
+        <td> 56,115</td>
+        <td> 401</td>
+    </tr>
+    <tr>
+        <td> 敘利亞</td>
+        <td> Syria</td>
+        <td> 55,870</td>
+        <td> 3,150</td>
+    </tr>
+    <tr>
+        <td> 加彭</td>
+        <td> Gabon</td>
+        <td> 47,608</td>
+        <td> 304</td>
+    </tr>
+    <tr>
+        <td> 巴布亞紐幾內亞</td>
+        <td> Papua New Guinea</td>
+        <td> 43,876</td>
+        <td> 651</td>
+    </tr>
+    <tr>
+        <td> 塞席爾</td>
+        <td> Seychelles</td>
+        <td> 43,235</td>
+        <td> 167</td>
+    </tr>
+    <tr>
+        <td> 安道爾</td>
+        <td> Andorra</td>
+        <td> 42,156</td>
+        <td> 153</td>
+    </tr>
+    <tr>
+        <td> 蒲隆地</td>
+        <td> Burundi</td>
+        <td> 41,235</td>
+        <td> 38</td>
+    </tr>
+    <tr>
+        <td> 多哥</td>
+        <td> Togo</td>
+        <td> 37,023</td>
+        <td> 273</td>
+    </tr>
+    <tr>
+        <td> 幾內亞</td>
+        <td> Guinea</td>
+        <td> 36,597</td>
+        <td> 442</td>
+    </tr>
+    <tr>
+        <td> 坦尚尼亞</td>
+        <td> Tanzania</td>
+        <td> 35,354</td>
+        <td> 840</td>
+    </tr>
+    <tr>
+        <td> 巴哈馬</td>
+        <td> Bahamas</td>
+        <td> 33,934</td>
+        <td> 801</td>
+    </tr>
+    <tr>
+        <td> 賴索托</td>
+        <td> Lesotho</td>
+        <td> 32,910</td>
+        <td> 697</td>
+    </tr>
+    <tr>
+        <td> 馬利</td>
+        <td> Mali</td>
+        <td> 31,014</td>
+        <td> 734</td>
+    </tr>
+    <tr>
+        <td> 海地</td>
+        <td> Haiti</td>
+        <td> 30,713</td>
+        <td> 835</td>
+    </tr>
+    <tr>
+        <td> 貝南</td>
+        <td> Benin</td>
+        <td> 26,952</td>
+        <td> 163</td>
+    </tr>
+    <tr>
+        <td> 聖露西亞</td>
+        <td> Saint Lucia</td>
+        <td> 24,267</td>
+        <td> 368</td>
+    </tr>
+    <tr>
+        <td> 剛果共和國</td>
+        <td> Congo</td>
+        <td> 24,079</td>
+        <td> 385</td>
+    </tr>
+    <tr>
+        <td> 東帝汶</td>
+        <td> East Timor</td>
+        <td> 22,889</td>
+        <td> 131</td>
+    </tr>
+    <tr>
+        <td> 布吉納法索</td>
+        <td> Burkina Faso</td>
+        <td> 20,853</td>
+        <td> 382</td>
+    </tr>
+    <tr>
+        <td> 索馬利亞</td>
+        <td> Somalia</td>
+        <td> 18,863</td>
+        <td> 930</td>
+    </tr>
+    <tr>
+        <td> 索羅門群島</td>
+        <td> Solomon islands</td>
+        <td> 18,174</td>
+        <td> 146</td>
+    </tr>
+    <tr>
+        <td> 塔吉克</td>
+        <td> Tajikistan</td>
+        <td> 17,786</td>
+        <td> 125</td>
+    </tr>
+    <tr>
+        <td> 南蘇丹</td>
+        <td> South Sudan</td>
+        <td> 17,541</td>
+        <td> 138</td>
+    </tr>
+    <tr>
+        <td> 列支敦斯登</td>
+        <td> Liechtenstein</td>
+        <td> 17,347</td>
+        <td> 84</td>
+    </tr>
+    <tr>
+        <td> 聖馬利諾</td>
+        <td> San Marino</td>
+        <td> 16,852</td>
+        <td> 115</td>
+    </tr>
+    <tr>
+        <td> 格瑞那達</td>
+        <td> Grenada</td>
+        <td> 16,512</td>
+        <td> 221</td>
+    </tr>
+    <tr>
+        <td> 赤道幾內亞</td>
+        <td> Equatorial Guinea</td>
+        <td> 15,910</td>
+        <td> 183</td>
+    </tr>
+    <tr>
+        <td> 吉布地</td>
+        <td> Djibouti</td>
+        <td> 15,631</td>
+        <td> 189</td>
+    </tr>
+    <tr>
+        <td> 中非</td>
+        <td> Central Africa</td>
+        <td> 14,649</td>
+        <td> 113</td>
+    </tr>
+    <tr>
+        <td> 尼加拉瓜</td>
+        <td> Nicaragua</td>
+        <td> 14,447</td>
+        <td> 236</td>
+    </tr>
+    <tr>
+        <td> 多米尼克</td>
+        <td> Dominica</td>
+        <td> 13,116</td>
+        <td> 63</td>
+    </tr>
+    <tr>
+        <td> 摩納哥</td>
+        <td> Monaco</td>
+        <td> 12,035</td>
+        <td> 54</td>
+    </tr>
+    <tr>
+        <td> 甘比亞</td>
+        <td> Gambia</td>
+        <td> 11,999</td>
+        <td> 365</td>
+    </tr>
+    <tr>
+        <td> 葉門</td>
+        <td> Yemen</td>
+        <td> 11,819</td>
+        <td> 2,149</td>
+    </tr>
+    <tr>
+        <td> 薩摩亞</td>
+        <td> Samoa</td>
+        <td> 11,671</td>
+        <td> 24</td>
+    </tr>
+    <tr>
+        <td> 東加</td>
+        <td> Tonga</td>
+        <td> 11,127</td>
+        <td> 11</td>
+    </tr>
+    <tr>
+        <td> 索馬利蘭</td>
+        <td> Somaliland</td>
+        <td> 9,890</td>
+        <td> 610</td>
+    </tr>
+    <tr>
+        <td> 厄利垂亞</td>
+        <td> Eritrea</td>
+        <td> 9,745</td>
+        <td> 103</td>
+    </tr>
+    <tr>
+        <td> 尼日</td>
+        <td> Niger</td>
+        <td> 9,013</td>
+        <td> 310</td>
+    </tr>
+    <tr>
+        <td> 萬那杜</td>
+        <td> Vanuatu</td>
+        <td> 8,464</td>
+        <td> 14</td>
+    </tr>
+    <tr>
+        <td> 幾內亞比索</td>
+        <td> Guinea-Bissau</td>
+        <td> 8,222</td>
+        <td> 171</td>
+    </tr>
+    <tr>
+        <td> 葛摩</td>
+        <td> Comoros</td>
+        <td> 8,100</td>
+        <td> 160</td>
+    </tr>
+    <tr>
+        <td> 安地卡及巴布達</td>
+        <td> Antigua and Barbuda</td>
+        <td> 7,795</td>
+        <td> 137</td>
+    </tr>
+    <tr>
+        <td> 獅子山</td>
+        <td> Sierra Leone</td>
+        <td> 7,682</td>
+        <td> 125</td>
+    </tr>
+    <tr>
+        <td> 賴比瑞亞</td>
+        <td> Liberia</td>
+        <td> 7,452</td>
+        <td> 294</td>
+    </tr>
+    <tr>
+        <td> 查德</td>
+        <td> Chad</td>
+        <td> 7,415</td>
+        <td> 193</td>
+    </tr>
+    <tr>
+        <td> 聖文森及格瑞那丁</td>
+        <td> Saint Vincent and the Grenadines</td>
+        <td> 6,801</td>
+        <td> 106</td>
+    </tr>
+    <tr>
+        <td> 聖多美普林西比</td>
+        <td> Sao Tome and Principe</td>
+        <td> 5,973</td>
+        <td> 73</td>
+    </tr>
+    <tr>
+        <td> 聖克里斯多福及尼維斯</td>
+        <td> Saint Kitts and Nevis</td>
+        <td> 5,610</td>
+        <td> 43</td>
+    </tr>
+    <tr>
+        <td> 庫克群島</td>
+        <td> Cook Islands</td>
+        <td> 5,410</td>
+        <td> 1</td>
+    </tr>
+    <tr>
+        <td> 帛琉</td>
+        <td> Palau</td>
+        <td> 4,879</td>
+        <td> 6</td>
+    </tr>
+    <tr>
+        <td> 吉里巴斯</td>
+        <td> Kiribati</td>
+        <td> 3,093</td>
+        <td> 13</td>
+    </tr>
+    <tr>
+        <td> 國際運輸工具(鑽石公主號)</td>
+        <td> Int'l conveyance (Japan)</td>
+        <td> 741</td>
+        <td> 13</td>
+    </tr>
+    <tr>
+        <td> 澳門</td>
+        <td> Macao</td>
+        <td> 82</td>
+        <td> 0</td>
+    </tr>
+    <tr>
+        <td> 教廷</td>
+        <td> Holy See</td>
+        <td> 29</td>
+        <td> 0</td>
+    </tr>
+    <tr>
+        <td> 馬紹爾群島</td>
+        <td> Marshall Islands</td>
+        <td> 17</td>
+        <td> 0</td>
+    </tr>
+    <tr>
+        <td> 紐埃</td>
+        <td> Niue</td>
+        <td> 9</td>
+        <td> 0</td>
+    </tr>
+    <tr>
+        <td> 密克羅尼西亞聯邦</td>
+        <td> Micronesia</td>
+        <td> 7</td>
+        <td> 0</td>
+    </tr>
+    <tr>
+        <td> 諾魯</td>
+        <td> Nauru</td>
+        <td> 3</td>
+        <td> 0</td>
+    </tr>
+    <tr>
+        <td> 北韓</td>
+        <td> North Korea</td>
+        <td> 2</td>
+        <td> 1</td>
+    </tr>
+    </tbody>
+    <tfoot>
+    <tr>
+        <th>country_ch</th>
+        <th>country_en</th>
+        <th>cases</th>
+        <th>deaths</th>
+    </tr>
+    </tfoot>
+</table>
+<script>
+    $(document).ready(function () {
+        $('#example').DataTable({
+                language: {
+                    url: "https://cdn.datatables.net/plug-ins/1.12.0/i18n/zh-HANT.json"
+                }
+            }
+        );
+    });
+</script>
+</body>
+</html>
